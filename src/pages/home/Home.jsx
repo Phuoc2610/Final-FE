@@ -6,14 +6,15 @@ import Slidebar from "../../components/slidebar/Slidebar";
 
 
 const Home = () => {
+
     return (
         <div>
             <Navbar />
             <Carousel />
-            <Slidebar />
             <Footer />
         </div>
     )
 }
+
 
 export default Home;
