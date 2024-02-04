@@ -6,7 +6,7 @@ import { FiSend } from "react-icons/fi";
 const Footer = () => {
 
     return (
-        <div className="mt-3">
+        <div className="mt-3 duration-500">
             <div className="flex justify-around py-10 bg-[#233a95]">
                 <div className="text-white">
                     <h2 className="text-5xl">Newsletter</h2>
@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
                 <div className="mt-3">
                     <input type="text" placeholder="Email" className=" py-2 pl-6 w-80 rounded-lg " />
-                    <button className="py-[12px] px-[40px] rounded-lg bg-[#ed174a] hover:bg-[#233a95]">
+                    <button className="py-[12px] px-[40px] rounded-lg bg-[#ed174a] hover:bg-[#0f183a]">
                     <FiSend className="text-[17px] text-white"/>
                     </button>
                 </div>
@@ -26,29 +26,29 @@ const Footer = () => {
                 <p>We are dedicated to the safety of our guests
                     <br />
                     and employees and have updated our safety measures.</p>
-                <div className="flex">
-                <FaFacebook className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800"/>
-                <FaInstagram className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800"/>
-                <FaTwitter className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800"/>
-                <FaYoutube className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800"/>
+                <div className="flex mt-3">
+                <FaFacebook className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800 dark:hover:text-white "/>
+                <FaInstagram className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800 dark:hover:text-white"/>
+                <FaTwitter className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800 dark:hover:text-white"/>
+                <FaYoutube className="text-4xl bg-gray-200 text-black-900 hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800 dark:hover:text-white"/>
                 </div>
             </div>
             <div>
                 <h3 className="underline text-3xl py-4">Information</h3>
                 <ul className="">
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">About Us</li>
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">Contact US</li>
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">FAQ's</li>
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">Special Products</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">About Us</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">Contact US</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">FAQ's</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">Special Products</li>
                 </ul>
             </div>
             <div>
                 <h3 className="ml-6 text-3xl underline py-4">Category</h3>
                 <ul>
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">Fruits & Vegetables</li>
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">Meats & Seafood</li>
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">Beverages</li>
-                    <li className="my-2 hover:text-blue-700 hover:underline duration-500">Breakfast & Dairy</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">Fruits & Vegetables</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">Meats & Seafood</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">Beverages</li>
+                    <li className="my-2 hover:text-blue-700 hover:underline ">Breakfast & Dairy</li>
                 </ul>
             </div>
             <div>

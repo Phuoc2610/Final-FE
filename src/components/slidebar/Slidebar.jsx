@@ -19,7 +19,7 @@ const Slidebar = () => {
         localStorage.setItem('darkMode', darkMode);
     }, [darkMode]);
 
-    const toggleDarkMode = () => {
+    const btnDarkMode = () => {
         setDarkMode((prevMode) => !prevMode);
     };
 
@@ -32,7 +32,7 @@ const Slidebar = () => {
         }
     };
 
-    const scrollToTop = () => {
+    const btnToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
@@ -49,13 +49,13 @@ const Slidebar = () => {
     return (
         <div className="fixed right-0 top-60 bg-gray-950 px-4 rounded">
             <div className="py-3 border-b-2 border-gray text-gray-500 hover:text-white duration-500">
-                <button onClick={scrollToTop}>
+                <button onClick={btnToTop}>
                     <BiArrowToTop className="text-3xl ml-1" />
                 </button>
 
             </div>
             <div className="pt-2 text-3xl ml-1 text-gray-500 hover:text-white duration-500">
-                <button onClick={toggleDarkMode}>
+                <button onClick={btnDarkMode}>
                     {darkMode ? <IoSunnyOutline /> : <MdOutlineNightlight />}
                 </button>
             </div>
