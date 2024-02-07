@@ -12,6 +12,7 @@ const Home = () => {
             <Navbar />
             <Carousel />
             <Footer />
+            <Slidebar />
         </div>
     )
 }

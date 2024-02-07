@@ -12,7 +12,7 @@ const Footer = () => {
                     <h2 className="text-5xl">Newsletter</h2>
                     <p className="text-[#ccc]">Excepteur sint occaecat cupidatat non proident, sunt.</p>
                 </div>
-                <div className="mt-3">
+                <div className="mt-4">
                     <input type="text" placeholder="Email" className=" py-2 pl-6 w-80 rounded-lg " />
                     <button className="py-[12px] px-[40px] rounded-lg bg-[#ed174a] hover:bg-[#0f183a]">
                     <FiSend className="text-[17px] text-white"/>
