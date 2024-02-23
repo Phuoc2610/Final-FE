@@ -1,12 +1,12 @@
 const Carousel = () => {
     return (
         <div>
-          <img className="w-full h-80v relative" src="https://p.w3layouts.com/demos_new/template_demo/06-10-2021/grocery-mart-liberty-demo_Free/794674028/web/images/banner8.jpg" alt="" />
+          <img className="w-full relative h-80v" src="https://p.w3layouts.com/demos_new/template_demo/06-10-2021/grocery-mart-liberty-demo_Free/794674028/web/images/banner8.jpg" alt="" />
 
-          <div className="absolute top-60 left-80">
-            <div className="flex">
+          <div className="absolute top-40 left-10 md:top-60 md:left-20 md:right-20 xl:top-60 xl:left-80">
+            <div className="md:flex">
             <div>
-                <h3 className="text-white text-5xl">Stay home & we will 
+                <h3 className="text-white text-5xl ">Stay home & we will 
                 <br /> 
                  deliver your daily need's</h3>
 

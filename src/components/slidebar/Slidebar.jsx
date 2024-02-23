@@ -47,25 +47,25 @@ const Slidebar = () => {
     }, []);
 
     return (
-        <div className="fixed right-0 top-60 bg-gray-950 px-4 rounded">
-            <div className="py-3 border-b-2 border-gray text-gray-500 hover:text-white duration-500">
+        <div className="fixed right-0 top-60 bg-gray-950 px-4 py-2 rounded">
+            <div className="py-3 border-b-2 border-gray item-slideBar">
                 <button onClick={btnToTop}>
                     <BiArrowToTop className="text-3xl ml-1" />
                 </button>
 
             </div>
-            <div className="pt-2 text-3xl ml-1 text-gray-500 hover:text-white duration-500">
+            <div className="text-3xl ml-1 item-slideBar">
                 <button onClick={btnDarkMode}>
                     {darkMode ? <IoSunnyOutline /> : <MdOutlineNightlight />}
                 </button>
             </div>
-            <div className="pt-2 text-gray-500 hover:text-white duration-500" >
+            <div className="item-slideBar" >
                 <IoArrowBack className="text-3xl ml-1" />
                 <h4 className="text-lg ">
                     Back
                 </h4>
             </div>
-            <div className="pt-2 text-gray-500 hover:text-white duration-500">
+            <div className="item-slideBar">
                 <MdOutlineShoppingCart className="text-3xl ml-1" />
                 <h4 className="text-lg ml-1">
                     Buy

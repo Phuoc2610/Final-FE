@@ -1,18 +1,30 @@
+import { IoMdMenu, IoMdClose  } from "react-icons/io";
+import { useState, useEffect } from "react";
+
+
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
     return (
         <>
           <nav className="sticky top-0 z-10">
-            <div className="flex justify-around bg-[#233a95] py-2">
-                <div>
+            <div className="md:flex justify-around bg-[#233a95] py-2">
+                <div className="flex justify-between px-4 items-center ">
                     <h2 className="text-white mt-2 text-2xl">K Mart</h2>
+                <div className="text-white text-3xl">
+                <button className="md:hidden block" onClick={()=>{
+                    setOpen(!open)
+                }}>
+                   {open ? <IoMdMenu /> : <IoMdClose />  } 
+                </button>
                 </div>
-                <div>
-                    <ul className="flex pb-2">
-                        <li className="mx-3 mt-3 text-lg text-white hover:underline">Home</li>
-                        <li className="mx-3 mt-3 text-lg text-white hover:underline">About</li>
-                        <li className="mx-3 mt-3 text-lg text-white hover:underline">Contact</li>
-                        <li className="mx-3 mt-3 text-lg text-white hover:underline">Login</li>
-                        <li className="mx-3 mt-3 text-lg text-white hover:underline">Register</li>
+                </div>
+                <div className={`${open ? 'hidden' : 'block'}`}>
+                    <ul className="max-md:grid max-md:justify-items-center max-md:gap-2 max-md:border-t-2 flex pb-2">
+                        <li className="item-nav">Home</li>
+                        <li className="item-nav">About</li>
+                        <li className="item-nav">Contact</li>
+                        <li className="item-nav">Login</li>
+                        <li className="item-nav">Register</li>
                     </ul>
                 </div>
             </div>

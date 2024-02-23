@@ -26,66 +26,66 @@ const Admin = () => {
 
 
     return (
-        <div className="flex h-screen">
-            <div className="bg-gray-800 text-slate-400 w-1/5">
+        <div className="md:flex xl:h-screen">
+            <div className="bg-gray-800 text-slate-400 w-full md:w-[30%] xl:w-[15%]">
                 <h3 className="flex text-3xl py-4 items-center justify-center">
                     <MdOutlineShoppingCart className="mr-2" />
                     K Mart</h3>
-                <ul className="pl-6">
-                    <li className="flex text-2xl py-4 items-center ">
+                <ul className="pl-6 max-md:grid max-md:justify-items-center">
+                    <li className="item-adminBar ">
                         <MdDashboard className="mr-2" />
                         Dashborad</li>
-                    <li className="flex text-2xl py-4 items-center ">
+                    <li className="item-adminBar ">
                         <BsFillArchiveFill className="mr-2" />
                         Product</li>
 
-                    <li className="flex text-2xl py-4 items-center ">
+                    <li className="item-adminBar ">
                         <MdDashboard className="mr-2" />
                         Dashborad</li>
-                    <li className="flex text-2xl py-4 items-center ">
+                    <li className="item-adminBar ">
                         <BsFillArchiveFill className="mr-2" />
                         Product</li>
 
-                    <li className="flex text-2xl py-4 items-center ">
+                    <li className="item-adminBar ">
                         <MdDashboard className="mr-2" />
                         Dashborad</li>
-                    <li className="flex text-2xl py-4 items-center ">
+                    <li className="item-adminBar ">
                         <BsFillArchiveFill className="mr-2" />
                         Product</li>
                 </ul>
             </div>
-            <div className="bg-gray-950 text-white w-full px-6">
-                <h4 className="mt-12 text-3xl mb-6">DASHBOARD</h4>
-                <div className=" grid grid-cols-4 gap-x-10 ">
-                    <div className="bg-blue-700 rounded px-6 py-6">
-                        <h5 className="flex items-center justify-between text-2xl">PRODUCTS
+            <div className="bg-gray-950 text-white w-full px-6 md:w-[70%] xl:w-[85%]">
+                <h4 className="text-3xl mb-6 text-center pt-[30px]">DASHBOARD</h4>
+                <div className="grid justify-items-center gap-y-5 lg:grid-cols-2 lg:gap-x-2 xl:grid-cols-4 xl:gap-x-10 ">
+                    <div className="bg-blue-700 item-admin">
+                        <h5 className="title-admin">PRODUCTS
                             <BsFillArchiveFill />
 
                         </h5>
-                        <p className="text-3xl pt-6 font-bold">249</p>
+                        <p className="text-admin">249</p>
                     </div>
-                    <div className="bg-yellow-700 rounded px-6 py-6 ">
-                        <h5 className="flex items-center justify-between text-2xl">CATEGORIES
+                    <div className="bg-yellow-700 item-admin">
+                        <h5 className="title-admin">CATEGORIES
                             <BsFillArchiveFill />
                         </h5>
-                        <p className="text-3xl pt-6 font-bold">255</p>
+                        <p className="text-admin">255</p>
                     </div>
-                    <div className="bg-green-700 rounded px-6 py-6 ">
-                        <h5 className="flex items-center justify-between text-2xl">CUSTOMERTS
+                    <div className="bg-green-700 item-admin">
+                        <h5 className="title-admin">CUSTOMERTS
                             <BsFillArchiveFill />
                         </h5>
-                        <p className="text-3xl pt-6 font-bold">1500</p>
+                        <p className="text-admin">1500</p>
                     </div>
-                    <div className="bg-red-700 rounded px-6 py-6 ">
-                        <h5 className="flex items-center justify-between text-2xl">STOREOWNER
+                    <div className="bg-red-700 item-admin">
+                        <h5 className="title-admin">STOREOWNER
                             <BsFillArchiveFill />
                         </h5>
-                        <p className="text-3xl pt-6 font-bold">500</p>
+                        <p className="text-admin">500</p>
                     </div>
                 </div>
 
-                <div className="flex mt-28">
-                    <div className="px-4">
+                <div className="xl:flex mt-28">
+                    <div className="px-4 max-md:max-w-96">
                         <ResponsiveContainer width={700} height={400}>
                             <BarChart data={data2}>
                                 <CartesianGrid strokeDasharray="3 3" />

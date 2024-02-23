@@ -1,48 +1,39 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@layer components {
+  .item-nav{
+    @apply mx-3 mt-3 text-lg text-white hover:underline;
+  }
+  .item-slideBar{
+    @apply pt-2 text-gray-500 hover:text-white duration-500;
+  }
+  .item-adminBar{
+    @apply flex text-2xl py-4 items-center;
+  }
+  .item-admin{
+    @apply  rounded px-6 py-6 w-[60%] lg:w-[80%] xl:w-full;
+  }
+  .title-admin{
+    @apply flex items-center justify-between text-2xl;
+  }
+  .text-admin{
+    @apply text-3xl pt-6 font-bold;
+  }
+  .item-footer{
+    @apply my-2 hover:text-blue-700 hover:underline;
+  }
+  .icon-footer{
+    @apply text-4xl bg-gray-200 text-black hover:bg-blue-800 hover:text-white duration-300 px-2 rounded-full ml-3 dark:text-blue-800 dark:hover:text-white;
+  }
+  .title-footer{
+    @apply underline text-3xl py-4;
+  }
+  .contact-footer{
+    @apply text-4xl bg-gray-200 text-blue-900 px-1 rounded-full;
+  }
+  .text-footer{
+    @apply pl-2 mt-1;
+  }
 }
