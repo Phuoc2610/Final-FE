@@ -26,7 +26,7 @@ const Admin = () => {
 
 
     return (
-        <div className="md:flex xl:h-screen">
+        <div className="md:flex lg:h-screen ">
             <div className="bg-gray-800 text-slate-400 w-full md:w-[30%] xl:w-[15%]">
                 <h3 className="flex text-3xl py-4 items-center justify-center">
                     <MdOutlineShoppingCart className="mr-2" />
@@ -41,17 +41,17 @@ const Admin = () => {
 
                     <li className="item-adminBar ">
                         <MdDashboard className="mr-2" />
-                        Dashborad</li>
+                        Categories</li>
                     <li className="item-adminBar ">
                         <BsFillArchiveFill className="mr-2" />
-                        Product</li>
+                        Customer</li>
 
                     <li className="item-adminBar ">
                         <MdDashboard className="mr-2" />
-                        Dashborad</li>
+                        Inventory</li>
                     <li className="item-adminBar ">
                         <BsFillArchiveFill className="mr-2" />
-                        Product</li>
+                        Reports</li>
                 </ul>
             </div>
             <div className="bg-gray-950 text-white w-full px-6 md:w-[70%] xl:w-[85%]">
@@ -84,9 +84,9 @@ const Admin = () => {
                     </div>
                 </div>
 
-                <div className="xl:flex mt-28">
-                    <div className="px-4 max-md:max-w-96">
-                        <ResponsiveContainer width={700} height={400}>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-28 box-border">
+                    <div className="">
+                        <ResponsiveContainer width="100%" height={400}>
                             <BarChart data={data2}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="name" />
@@ -98,16 +98,18 @@ const Admin = () => {
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
-                    <div className="px-4">
-                        <LineChart width={700} height={400} data={data1}>
-                            <XAxis dataKey="name" />
-                            <YAxis />
-                            <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-                            <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                            <Tooltip />
-                            <Legend />
-                        </LineChart>
+                    <div className="">
+                        <ResponsiveContainer width="100%" height={400}>
+                            <LineChart data={data1}>
+                                <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+                                <XAxis dataKey="name" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+                                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                            </LineChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
             </div>

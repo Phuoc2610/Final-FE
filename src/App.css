@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-polygon {
+    clip-path: polygon(0 0, 100% 150%, 100% 0%);
+  }
+}
+
 @layer components {
+  .btn{
+    @apply bg-gradient-to-r from-indigo-500  to-pink-500 hover:from-pink-500 hover:to-indigo-500 text-white p-2 rounded-lg w-[20%] transition-all duration-1000;
+  }
+  .input{
+    @apply mt-1 p-2 w-full font-semibold border rounded-lg shadow-md;
+  }
   .item-nav{
     @apply mx-3 mt-3 text-lg text-white hover:underline;
   }
@@ -10,10 +22,10 @@
     @apply pt-2 text-gray-500 hover:text-white duration-500;
   }
   .item-adminBar{
-    @apply flex text-2xl py-4 items-center;
+    @apply flex text-2xl py-4 items-center text-slate-400 hover:text-white duration-500 cursor-default;
   }
   .item-admin{
-    @apply  rounded px-6 py-6 w-[60%] lg:w-[80%] xl:w-full;
+    @apply  rounded px-6 py-6 w-[60%] lg:w-[80%] xl:w-full ;
   }
   .title-admin{
     @apply flex items-center justify-between text-2xl;

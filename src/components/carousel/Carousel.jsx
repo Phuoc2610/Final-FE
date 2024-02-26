@@ -6,7 +6,7 @@ const Carousel = () => {
           <div className="absolute top-40 left-10 md:top-60 md:left-20 md:right-20 xl:top-60 xl:left-80">
             <div className="md:flex">
             <div>
-                <h3 className="text-white text-5xl ">Stay home & we will 
+                <h3 className="text-white text-5xl animate-bounce">Stay home & we will 
                 <br /> 
                  deliver your daily need's</h3>
 
