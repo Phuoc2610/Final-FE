@@ -6,7 +6,7 @@ import { FiSend } from "react-icons/fi";
 const Footer = () => {
 
     return (
-        <div className="mt-3 duration-500">
+        <div className="duration-500">
             <div className="min-[1000px]:flex justify-around py-10 bg-[#233a95]">
                 <div className="text-white max-[1000px]:text-center">
                     <h2 className="text-5xl">Newsletter</h2>

@@ -41,17 +41,17 @@ const Admin = () => {
 
                     <li className="item-adminBar ">
                         <MdDashboard className="mr-2" />
-                        Dashborad</li>
+                        Categories</li>
                     <li className="item-adminBar ">
                         <BsFillArchiveFill className="mr-2" />
-                        Product</li>
+                        Customers</li>
 
                     <li className="item-adminBar ">
                         <MdDashboard className="mr-2" />
-                        Dashborad</li>
+                        Storeowner</li>
                     <li className="item-adminBar ">
                         <BsFillArchiveFill className="mr-2" />
-                        Product</li>
+                        Report</li>
                 </ul>
             </div>
             <div className="bg-gray-950 text-white w-full px-6 md:w-[70%] xl:w-[85%]">
