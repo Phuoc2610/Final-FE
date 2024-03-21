@@ -21,8 +21,12 @@ const Navbar = () => {
                 <div className={`${open ? 'hidden' : 'block'}`}>
                     <ul className="max-md:grid max-md:justify-items-center max-md:gap-2 max-md:border-t-2 flex pb-2">
                         <li className="item-nav">Home</li>
-                        <li className="item-nav">About</li>
-                        <li className="item-nav">Contact</li>
+                        <li className="item-nav">
+                            <a href="#product">Product</a>
+                        </li>
+                        <li className="item-nav">
+                            <a href="#contact">Contact</a>
+                        </li>
                         <li className="item-nav">Login</li>
                         <li className="item-nav">Register</li>
                     </ul>

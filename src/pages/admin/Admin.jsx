@@ -3,7 +3,6 @@ import { BsFillArchiveFill } from "react-icons/bs";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from 'recharts';
 
 
-
 const Admin = () => {
     const data1 = [
         { name: 'Jan', uv: 4000, pv: 2400, amt: 2400 },
@@ -113,6 +112,7 @@ const Admin = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

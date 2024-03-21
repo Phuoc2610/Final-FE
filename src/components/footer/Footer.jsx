@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
 
         <div className="container-fluid py-3 dark:bg-[#0f183a] dark:text-white grid text-center justify-items-center gap-6 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
-            <div className="">
+            <div id="contact">
                 <h3 className="title-footer">K Mart</h3>
                 <p>We are dedicated to the safety of our guests
                     <br />

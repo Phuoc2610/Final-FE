@@ -10,7 +10,10 @@
 
 @layer components {
   .btn{
-    @apply bg-gradient-to-r from-indigo-500  to-pink-500 hover:from-pink-500 hover:to-indigo-500 text-white p-2 rounded-lg w-[20%] transition-all duration-1000;
+    @apply bg-gradient-to-r from-indigo-500  to-pink-500 hover:from-pink-500 hover:to-indigo-500 text-white border-none p-2 rounded-lg w-[20%] transition-all duration-1000;
+  }
+  .btn-cate{
+    @apply text-white p-2 rounded-lg w-[20%] bg-[#233a95] hover:bg-[#232b95];
   }
   .input{
     @apply mt-1 p-2 w-full font-semibold border rounded-lg shadow-md;

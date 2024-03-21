@@ -1,6 +1,16 @@
+import { useState } from "react";
+import Details from "../../pages/details/Detail";
+
 const Products = () => {
     return (
-        <div className="dark:bg-[#0f183a]">
+        <div className="dark:bg-[#0f183a]" id="product">
+            <div className="flex justify-between max-md:w-[95%] lg:w-[70%] xl:w-[50%] mx-auto pt-6">
+                <button className="btn-cate">Meats</button>
+                <button className="btn-cate">Seafood</button>
+                <button className="btn-cate">Vegetables</button>
+                <button className="btn-cate">Fruits</button>
+            </div>
+
             <div className="w-[90%] mx-auto pb-[4%] rounded-lg">
                 <h1 className="text-center text-3xl font-bold py-6 dark:text-white">Products</h1>
                 <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -12,7 +22,7 @@ const Products = () => {
                             <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
                             <div className="pb-2">
                                 <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 ">100$</span>
+                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
                             </div>
                             <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
                             <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
@@ -28,7 +38,7 @@ const Products = () => {
                             <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
                             <div className="pb-2">
                                 <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 ">100$</span>
+                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
                             </div>
                             <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
                             <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
@@ -44,7 +54,7 @@ const Products = () => {
                             <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
                             <div className="pb-2">
                                 <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 ">100$</span>
+                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
                             </div>
                             <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
                             <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
@@ -60,7 +70,7 @@ const Products = () => {
                             <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
                             <div className="pb-2">
                                 <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 ">100$</span>
+                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
                             </div>
                             <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
                             <button className="w-[70%] md:w-[80%] btn">Add to Card</button>

@@ -3,6 +3,8 @@ import { MdCancelPresentation } from "react-icons/md";
 
 
 const Details = () => {
+    
+
     return (
         <div className=" h-screen flex items-center justify-center rounded-lg">
             <div className="w-[50%] rounded-lg shadow-2xl flex">
