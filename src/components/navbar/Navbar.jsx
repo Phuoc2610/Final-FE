@@ -1,9 +1,16 @@
 import { IoMdMenu, IoMdClose  } from "react-icons/io";
 import { useState, useEffect } from "react";
+import Login from "../../pages/login/Login";
+import Register from "../../pages/register/Register";
 
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [seen, setSeen] = useState(false);
+
+  function togglePop() {
+    setSeen(!seen);
+  }
     return (
         <>
           <nav className="sticky top-0 z-10">
@@ -27,8 +34,14 @@ const Navbar = () => {
                         <li className="item-nav">
                             <a href="#contact">Contact</a>
                         </li>
-                        <li className="item-nav">Login</li>
-                        <li className="item-nav">Register</li>
+                        <li className="item-nav">
+                        <button onClick={togglePop}>Login</button>
+      {seen ? <Login toggle={togglePop} /> : null}
+                            </li>
+                        <li className="item-nav">
+                        <button onClick={togglePop}>Register</button>
+      {seen ? <Register toggle={togglePop} /> : null}
+                        </li>
                     </ul>
                 </div>
             </div>
