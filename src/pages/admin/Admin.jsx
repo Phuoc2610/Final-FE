@@ -3,6 +3,7 @@ import { BsFillArchiveFill } from "react-icons/bs";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from 'recharts';
 
 
+
 const Admin = () => {
     const data1 = [
         { name: 'Jan', uv: 4000, pv: 2400, amt: 2400 },
@@ -25,6 +26,7 @@ const Admin = () => {
 
 
     return (
+
         <div className="md:flex lg:h-screen ">
             <div className="bg-gray-800 text-slate-400 w-full md:w-[30%] xl:w-[15%]">
                 <h3 className="flex text-3xl py-4 items-center justify-center">

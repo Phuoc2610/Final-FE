@@ -9,7 +9,7 @@ const Register = (props) => {
   }
   return (
     <div className=" w-full fixed top-0 left-0  items-center justify-center " onSubmit={handleRegister}>
-      <div className="w-[60%] fixed top-[25%] left-[25%] bg-white rounded-lg shadow-2xl flex">
+      <div className="w-[60%] fixed top-[25%] left-[25%] bg-[#f5f0f0] rounded-lg shadow-2xl flex">
         <form className=" w-[60%] py-[30px] grid justify-items-center  ">
           <h2 className="text-3xl font-semibold mb-4 text-black">Sign Up</h2>
           <div class="mb-4 w-[80%] flex justify-between text-black">

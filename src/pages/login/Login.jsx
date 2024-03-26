@@ -2,7 +2,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/authThunks';
 import { IoMdClose } from "react-icons/io";
-import React, { useState } from 'react';
 
 const Login = (props) => {
   const dispatch = useDispatch();
@@ -13,7 +12,7 @@ const Login = (props) => {
   }
   return (
     <div className=" w-full h-full fixed top-0 left-0 items-center justify-center " onSubmit={handleLogin}>
-      <div className="w-[60%] fixed top-[30%] left-[25%] bg-white rounded-lg shadow-2xl flex">
+      <div className="w-[60%] fixed top-[30%] left-[25%] bg-[#f5f0f0] rounded-lg shadow-2xl flex">
         <Formik
           initialValues={{ email: '', password: '' }}
           validate={values => {

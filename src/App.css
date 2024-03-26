@@ -6,6 +6,12 @@
   .clip-polygon {
     clip-path: polygon(0 0, 100% 150%, 110% 0%);
   }
+  .top-model {
+    border-radius: 15px 15px 0px 0px;
+  }
+  .bottom-model{
+    border-radius: 0px 0px 15px 15px;
+  }
 }
 
 @layer components {

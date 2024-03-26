@@ -1,4 +1,4 @@
-import { IoMdMenu, IoMdClose  } from "react-icons/io";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { useState, useEffect } from "react";
 import Login from "../../pages/login/Login";
 import Register from "../../pages/register/Register";
@@ -6,46 +6,50 @@ import Register from "../../pages/register/Register";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const [seen, setSeen] = useState(false);
+    const [login, setLogin] = useState(false);
+    const [register, setRegister] = useState(false);
 
-  function togglePop() {
-    setSeen(!seen);
-  }
+    function popLogin() {
+        setLogin(!login);
+    }
+    function popRegister() {
+        setRegister(!register);
+    }
     return (
         <>
-          <nav className="sticky top-0 z-10">
-            <div className="md:flex justify-around bg-[#233a95] py-2">
-                <div className="flex justify-between px-4 items-center ">
-                    <h2 className="text-white mt-2 text-2xl font-bold">K Mart</h2>
-                <div className="text-white text-3xl">
-                <button className="md:hidden block" onClick={()=>{
-                    setOpen(!open)
-                }}>
-                   {open ? <IoMdMenu /> : <IoMdClose />  } 
-                </button>
-                </div>
-                </div>
-                <div className={`${open ? 'hidden' : 'block'}`}>
-                    <ul className="max-md:grid max-md:justify-items-center max-md:gap-2 max-md:border-t-2 flex pb-2">
-                        <li className="item-nav">Home</li>
-                        <li className="item-nav">
-                            <a href="#product">Product</a>
-                        </li>
-                        <li className="item-nav">
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li className="item-nav">
-                        <button onClick={togglePop}>Login</button>
-      {seen ? <Login toggle={togglePop} /> : null}
+            <nav className="sticky top-0 z-10">
+                <div className="md:flex justify-around bg-[#233a95] py-2">
+                    <div className="flex justify-between px-4 items-center ">
+                        <h2 className="text-white mt-2 text-2xl font-bold">K Mart</h2>
+                        <div className="text-white text-3xl">
+                            <button className="md:hidden block" onClick={() => {
+                                setOpen(!open)
+                            }}>
+                                {open ? <IoMdMenu /> : <IoMdClose />}
+                            </button>
+                        </div>
+                    </div>
+                    <div className={`${open ? 'hidden' : 'block'}`}>
+                        <ul className="max-md:grid max-md:justify-items-center max-md:gap-2 max-md:border-t-2 flex pb-2">
+                            <li className="item-nav">Home</li>
+                            <li className="item-nav">
+                                <a href="#product">Product</a>
                             </li>
-                        <li className="item-nav">
-                        <button onClick={togglePop}>Register</button>
-      {seen ? <Register toggle={togglePop} /> : null}
-                        </li>
-                    </ul>
+                            <li className="item-nav">
+                                <a href="#contact">Contact</a>
+                            </li>
+                            <li className="item-nav">
+                                <button onClick={popLogin}>Login</button>
+                                {login ? <Login toggle={popLogin} /> : null}
+                            </li>
+                            <li className="item-nav">
+                                <button onClick={popRegister}>Register</button>
+                                {register ? <Register toggle={popRegister} /> : null}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-          </nav>
+            </nav>
         </>
     )
 }

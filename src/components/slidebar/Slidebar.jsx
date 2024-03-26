@@ -2,7 +2,9 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { BiArrowToTop } from "react-icons/bi";
 import { IoArrowBack, IoSunnyOutline } from "react-icons/io5";
 import { MdOutlineNightlight } from "react-icons/md";
+import { IoMdChatboxes } from "react-icons/io";
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 const Slidebar = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -39,6 +41,7 @@ const Slidebar = () => {
         });
     };
 
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -60,16 +63,16 @@ const Slidebar = () => {
                 </button>
             </div>
             <div className="item-slideBar" >
-                <IoArrowBack className="text-3xl ml-1" />
-                <h4 className="text-lg ">
-                    Back
-                </h4>
+                <Link className="text-lg" to="/chat">
+                    <IoMdChatboxes className="text-3xl ml-1" />
+                    Chat
+                </Link>
             </div>
             <div className="item-slideBar">
-                <MdOutlineShoppingCart className="text-3xl ml-1" />
-                <h4 className="text-lg ml-1">
+                <Link className="text-lg" to="/">
+                    <MdOutlineShoppingCart className="text-3xl ml-1" />
                     Buy
-                </h4>
+                </Link>
             </div>
         </div>
     )
