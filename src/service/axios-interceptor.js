@@ -23,7 +23,7 @@ http.interceptors.request.use(
 http.interceptors.response.use(
   async function (response) {
     if (response.data) {
-      return response;
+      return response.data;
     }
     return response;
   },
