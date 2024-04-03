@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Details from "../../pages/details/Detail";
+import { Link } from 'react-router-dom';
 
 const Products = () => {
     const [open, setOpen] = useState(false);
@@ -9,16 +9,8 @@ const Products = () => {
         setSeen(!seen);
     }
     return (
-        <div className="dark:bg-[#0f183a]" id="product">
-            <div className="flex justify-between max-md:w-[95%] lg:w-[70%] xl:w-[50%] mx-auto pt-6">
-                <button className="btn-cate">Meats</button>
-                <button className="btn-cate">Seafood</button>
-                <button className="btn-cate">Vegetables</button>
-                <button className="btn-cate">Fruits</button>
-            </div>
-
+        <div className="dark:bg-[#0f183a] pt-6" id="product">
             <div className="w-[90%] mx-auto pb-[4%] rounded-lg">
-                <h1 className="text-center text-3xl font-bold py-6 dark:text-white">Products</h1>
                 <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     <div className="w-[100%] rounded-lg shadow-2xl">
                         <div className='w-full bg-slate-300 items-center justify-center py-4'>
@@ -48,12 +40,13 @@ const Products = () => {
                             </div>
                             <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
                                 <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
-                                <button className="w-[40%] max-md:mt-2 md:w-[50%] btn" onClick={togglePop}>
-                                    More
+                                <button className="w-[40%] max-md:mt-2 md:w-[50%] btn" >
+                                    <Link className="" to="/detail">
+                                        More
+                                    </Link>
                                 </button>
                             </div>
                         </div>
-                                {seen ? <Details toggle={togglePop} /> : null}
                     </div>
                     <div className="w-[100%] rounded-lg shadow-2xl">
                         <div className='w-full bg-slate-300 items-center justify-center py-4'>
