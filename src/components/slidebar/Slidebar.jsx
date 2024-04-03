@@ -1,6 +1,6 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { BiArrowToTop } from "react-icons/bi";
-import { IoArrowBack, IoSunnyOutline } from "react-icons/io5";
+import { IoSunnyOutline } from "react-icons/io5";
 import { MdOutlineNightlight } from "react-icons/md";
 import { IoMdChatboxes } from "react-icons/io";
 import { useState, useEffect } from "react";
@@ -41,6 +41,7 @@ const Slidebar = () => {
         });
     };
 
+  
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -53,15 +54,16 @@ const Slidebar = () => {
         <div className="fixed right-0 top-60 bg-gray-950 px-4 py-2 rounded">
             <div className="py-3 border-b-2 border-gray item-slideBar">
                 <button onClick={btnToTop}>
-                    <BiArrowToTop className="text-3xl ml-1" />
+                    <BiArrowToTop className="text-3xl " />
                 </button>
 
             </div>
-            <div className="text-3xl ml-1 item-slideBar">
+            <div className="text-3xl  item-slideBar">
                 <button onClick={btnDarkMode}>
                     {darkMode ? <IoSunnyOutline /> : <MdOutlineNightlight />}
                 </button>
             </div>
+
             <div className="item-slideBar" >
                 <Link className="text-lg" to="/chat">
                     <IoMdChatboxes className="text-3xl ml-1" />
@@ -69,8 +71,8 @@ const Slidebar = () => {
                 </Link>
             </div>
             <div className="item-slideBar">
-                <Link className="text-lg" to="/">
-                    <MdOutlineShoppingCart className="text-3xl ml-1" />
+                <Link className="text-lg" to="/cart">
+                    <MdOutlineShoppingCart className="text-3xl " />
                     Buy
                 </Link>
             </div>
