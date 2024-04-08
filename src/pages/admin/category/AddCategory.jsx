@@ -10,7 +10,7 @@ const AddCategory = (props) => {
         props.toggle(); // Close the popup form
     }
     const dispatch = useDispatch()
-    const [name, setName]= useState()
+    const [name, setName]= useState();
     const addCategory = ()=>{
         dispatch(createCategory({name: name}))
     }
@@ -23,7 +23,7 @@ const AddCategory = (props) => {
                         <input type="text" placeholder="CategoryName" className="input" value={name} onChange={(e) => (setName(e.target.value))}/>
                     </div>
 
-                    <button type="submit" className="btn" onClick={()=>{addCategory()}}>Create</button>
+                    <button type="submit" className="btn-popup" onClick={()=>{addCategory()}}>Create</button>
                 </form>
                 <div className="w-[60%] bg-blue-700 flex items-center justify-center clip-polygon rounded-md">
                     <img className="w-full" src="https://p.w3layouts.com/demos_new/template_demo/06-10-2021/grocery-mart-liberty-demo_Free/794674028/web/images/banner-img.png" alt="" />

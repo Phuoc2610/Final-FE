@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { createCategory, getCategory } from "./categoryThunks"
+import { createCategory, getCategory, updateCategory } from "./categoryThunks"
 
 const initialState  = {
     isLogin : false,
@@ -40,6 +40,19 @@ const categorySlice = createSlice({
             state.loading = true
         })
         builder.addCase(createCategory.rejected,(state, action)=>{
+            state.error=''
+            state.loading = true
+        })
+        builder.addCase(updateCategory.pending,(state, action)=>{
+            state.error=''
+            state.loading = false
+        })
+        builder.addCase(updateCategory.fulfilled,(state, action)=>{
+            const newCategory = state.data.filter((item) => item.id !== action.payload.id)
+            state.data = [...newCategory, action.payload]
+            state.loading = true
+        })
+        builder.addCase(updateCategory.rejected,(state, action)=>{
             state.error=''
             state.loading = true
         })
