@@ -22,7 +22,7 @@ const StoreDashboard = () => {
     ];
 
     return (
-        <div className="">
+        <div className="h-[93vh]">
             <h4 className="text-3xl mb-6 text-center pt-[30px]">DASHBOARD</h4>
             <div className="grid justify-items-center gap-y-5 lg:grid-cols-2 lg:gap-x-2 xl:grid-cols-4 xl:gap-x-10 ">
                 <div className="bg-blue-700 item-admin">
