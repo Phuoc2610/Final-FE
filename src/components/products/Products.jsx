@@ -1,87 +1,50 @@
-import { useState } from "react";
-import { Link } from 'react-router-dom';
-
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from 'react-router-dom';
+import { getProduct } from '../../redux/product/productThunks'
+import Pagination from "./Pagination";
 const Products = () => {
-    const [open, setOpen] = useState(false);
-    const [seen, setSeen] = useState(false);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const { data } = useSelector((state) => state.product);
+    const [currentPage, setCurrentPage] = useState(1);
 
-    function togglePop() {
-        setSeen(!seen);
-    }
+    useEffect(() => {
+        dispatch(getProduct({ page: currentPage, perPage: 8 }));
+    }, [currentPage, dispatch]);
+
     return (
         <div className="dark:bg-[#0f183a] pt-6" id="product">
-            <div className="w-[90%] mx-auto pb-[4%] rounded-lg">
-                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                    <div className="w-[100%] rounded-lg shadow-2xl">
-                        <div className='w-full bg-slate-300 items-center justify-center py-4'>
-                            <img className="w-[80%] mx-auto " src="https://p.w3layouts.com/demos_new/template_demo/06-10-2021/grocery-mart-liberty-demo_Free/794674028/web/images/banner-img.png" alt="" />
-                        </div>
-                        <div className="text-center dark:bg-indigo-950 pb-4">
-                            <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
-                            <div className="pb-2">
-                                <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
+            <div className="w-[90%] mx-auto rounded-lg">
+                <div className="grid grid-cols-2 grid-rows-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {data?.data?.map((item) => (
+                        <div className="w-full rounded-lg shadow-2xl cursor-pointer" key={item?.id}  >
+                            <div className='w-full h-[240px] '>
+                                <img loading="lazy" className="object-cover w-full h-full" src={item?.productImages[0]?.url} alt="" />
                             </div>
-                            <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
-                                <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
-                                <button className="w-[40%] max-md:mt-2 md:w-[50%] btn">More</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-[100%] rounded-lg shadow-2xl">
-                        <div className='w-full bg-slate-300 items-center justify-center py-4'>
-                            <img className="w-[80%] mx-auto " src="https://p.w3layouts.com/demos_new/template_demo/06-10-2021/grocery-mart-liberty-demo_Free/794674028/web/images/banner-img.png" alt="" />
-                        </div>
-                        <div className="text-center dark:bg-indigo-950 pb-4">
-                            <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
-                            <div className="pb-2">
-                                <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
-                            </div>
-                            <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
-                                <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
-                                <button className="w-[40%] max-md:mt-2 md:w-[50%] btn" >
-                                    <Link className="" to="/detail">
-                                        More
-                                    </Link>
-                                </button>
+
+                            <div className="text-center dark:bg-[#253569a2] pb-4">
+                                <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">{item?.name}</h2>
+                                <div className="pb-2">
+                                    <span className="text-2xl font-semibold dark:text-white">{item?.price}$</span>
+                                </div>
+                                <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
+                                    <button className="w-[70%] md:w-[80%] btn-product" onClick={() => { navigate(`/cart/${item?.id}`) }}>Add to Card</button>
+                                    <button className="w-[40%] max-md:mt-2 md:w-[50%] btn-product" onClick={() => { navigate(`/details/${item?.id}`) }}>More</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="w-[100%] rounded-lg shadow-2xl">
-                        <div className='w-full bg-slate-300 items-center justify-center py-4'>
-                            <img className="w-[80%] mx-auto " src="https://p.w3layouts.com/demos_new/template_demo/06-10-2021/grocery-mart-liberty-demo_Free/794674028/web/images/banner-img.png" alt="" />
-                        </div>
-                        <div className="text-center dark:bg-indigo-950 pb-4">
-                            <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
-                            <div className="pb-2">
-                                <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
-                            </div>
-                            <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
-                                <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
-                                <button className="w-[40%] max-md:mt-2 md:w-[50%] btn">More</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-[100%] rounded-lg shadow-2xl">
-                        <div className='w-full bg-slate-300 items-center justify-center py-4'>
-                            <img className="w-[80%] mx-auto " src="https://p.w3layouts.com/demos_new/template_demo/06-10-2021/grocery-mart-liberty-demo_Free/794674028/web/images/banner-img.png" alt="" />
-                        </div>
-                        <div className="text-center dark:bg-indigo-950 pb-4">
-                            <h2 className="py-2 text-center text-red-600 font-semibold text-2xl">Himalayan Cashews</h2>
-                            <div className="pb-2">
-                                <span className="text-[18px] text-slate-500 line-through px-2">200$</span>
-                                <span className="text-2xl font-semibold px-2 dark:text-white">100$</span>
-                            </div>
-                            <div className="grid justify-items-center md:grid-cols-2 md:gap-1">
-                                <button className="w-[70%] md:w-[80%] btn">Add to Card</button>
-                                <button className="w-[40%] max-md:mt-2 md:w-[50%] btn">More</button>
-                            </div>
-                        </div>
-                    </div>
+
+                    ))}
+
                 </div>
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={data?.meta?.totalPages}
+                    onPageChange={setCurrentPage}
+                />
             </div>
+       
         </div>
     )
 }
